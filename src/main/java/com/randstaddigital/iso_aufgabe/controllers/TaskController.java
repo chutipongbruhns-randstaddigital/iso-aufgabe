@@ -9,15 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * Dies ist der REST-Controller. Er definiert die HTTP-Endpunkte (URLs)
- * für unsere API.
- * * @RestController = Sagt Spring, dass dies ein Controller ist und die Rückgabewerte
- * automatisch in JSON umgewandelt werden sollen.
- *
- * @RequestMapping("/api/tasks") = Setzt das Basis-URL-Präfix für alle Methoden
- * in dieser Klasse.
- */
+
 @RestController
 @RequestMapping("/api/tasks")
 public class TaskController {
@@ -34,22 +26,14 @@ public class TaskController {
         this.taskService = taskService;
     }
 
-    /**
-     * API-Endpunkt, um ALLE Tasks abzurufen.
-     * Mapped auf: GET http://localhost:8080/api/tasks
-     */
+
     @GetMapping
     public List<Task> getAllTasks() {
         // Verwendet die von JpaRepository bereitgestellte Methode findAll().
         return taskService.findAll();
     }
 
-    /**
-     * API-Endpunkt, um einen NEUEN Task zu erstellen.
-     * Mapped auf: POST http://localhost:8080/api/tasks
-     * * @RequestBody = Spring, nimmt den JSON-Text aus dem POST-Request und wandelt
-     * ihn automatisch in ein Java-Task-Objekt um.
-     */
+
     @PostMapping
     public ResponseEntity<Task> createTask(@RequestBody Task task) {
         // Wir setzen die ID auf null, um sicherzustellen, dass save() eine NEUE Entität
