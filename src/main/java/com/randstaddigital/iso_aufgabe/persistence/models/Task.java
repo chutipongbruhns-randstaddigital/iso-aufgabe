@@ -1,14 +1,12 @@
 package com.randstaddigital.iso_aufgabe.persistence.models;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
 @Data
+@Entity
 @NoArgsConstructor
 @Table(name = "tasks")
 public class Task {
