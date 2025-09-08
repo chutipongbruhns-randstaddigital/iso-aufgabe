@@ -46,7 +46,7 @@ class TaskServiceTest {
         // Assert
         assertNotNull(results);
         assertEquals(2, results.size());
-        assertEquals("Task 1", results.get(0).getTitle());
+        assertEquals("Task 1", results.getFirst().getTitle());
 
         verify(taskRepository, times(1)).findAll();
     }

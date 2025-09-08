@@ -42,7 +42,7 @@ class TaskControllerTest {
         Task task1 = new Task();
         task1.setId(1L);
         task1.setTitle("Test Task 1");
-        List<Task> taskList = Arrays.asList(task1);
+        List<Task> taskList = List.of(task1);
 
 
         when(taskService.findAll()).thenReturn(taskList);
