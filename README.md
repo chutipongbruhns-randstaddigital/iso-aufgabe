@@ -21,8 +21,8 @@ Für dieses Projekt sind unterschiedliche Werkzeuge erforderlich, je nachdem, ob
 ### 1.1. Voraussetzungen (Nur Applikation)
 
 Um die Spring Boot-Anwendung lokal zu starten, wird Folgendes benötigt:
-* **Git:** Zum Klonen des Repositorys.
-* **Java JDK 21:** Das Projekt ist mit Java 21 konfiguriert.
+* **Git:** 
+* **Java JDK 21:** 
 * **Maven:** Das Projekt verwendet den Maven Wrapper (`mvnw`), sodass keine separate Maven-Installation erforderlich ist.
 
 ### 1.2. Voraussetzungen (Vollständige Pipeline)
@@ -64,7 +64,7 @@ Wir müssen die beiden Server (SonarQube und Jenkins) in Docker-Containern start
     ```bash
     docker run -d -p 9000:9000 -v sonarqube_data:/opt/sonarqube/data sonarqube:lts-community
     ```
-    (Warte 1-2 Minuten, bis der Server unter `http://localhost:9000` verfügbar ist. Login: `admin`/`admin`).
+    (Warte 1-2 Minuten, bis der Server unter `http://localhost:9000` verfügbar ist. Login: `admin`/`changeme`).
 
 2.  **Jenkins starten:**
     ```bash
